@@ -1,0 +1,50 @@
+cd Scaling
+docker-compose up 
+doskey/history > DevOps_day4.2.0.txt
+docker build -t jbossimage:2.0 .
+docker run -it jbossimage:2.0
+docker images
+docker ps -a
+docker build -t jbossimage:2.0 .
+docker run -it jbossimage:2.0
+docker build -t jbossimage:2.0 .
+docker run -it jbossimage:2.0
+docker build -t jbossimage:2.0 .
+docker run -it jbossimage:2.0
+docker ps 
+docker build -t jbossimage:2.0 .
+docker run -it jbossimage:2.0
+docker build -t jbossimage:2.0 .
+docker run -it jbossimage:2.0
+docker ps
+cd ..
+cd node-app
+docker build -t node_app:1.0 .
+docker ps -a
+docker Images
+docker images
+docker run -p 9090:8080 fb7b32dee19e
+cd ..
+cd python-docker
+docker build -t python_img:1.0 .
+docker run -p 5000 python_img:1.0 
+docker run -p 5000:5000 python_img:1.0 
+docker run -p 5000:8080 python_img:1.0 
+docker ps
+docker kill 90555a3de3fe 
+docker kill cd3a54a637d5 
+docker kill 38b66e9bcfd7 
+docker run -p 5000:8080 python_img:1.0 
+docker run -it python_img:1.0
+docker build -t python_img:1.0 .
+docker images
+docker run -p 5000:5000 e2a161e786c9
+docker ps
+docker kill 28744f364155 
+docker ps
+docker run -p 5000:5000 e2a161e786c9
+docker ps
+docker kill 2e37ca592b36 
+docker ps
+docker run -p 5000:5000 python_img:1.0
+cd ..
