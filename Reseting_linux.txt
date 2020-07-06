@@ -1,0 +1,7 @@
+Intrup the booting
+linux - 16 -line - replace with rd.break enforcing=0
+
+
+mount -o remount,rw /sysroot
+chroot /sysroot
+vi /etc/fstab
