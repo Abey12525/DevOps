@@ -1,0 +1,30 @@
+- name: Installing Packages 
+  hosts: all
+
+  tasks:
+  - name: Installing GIT
+    package:
+      name: git 
+      state: present
+
+  - name: Installing Maven and Java 
+    package:
+      name:
+      - java
+      - maven 
+      state: present
+- name: install a package and start the service post same
+  hosts: 
+  - appservers
+  - dbservers 
+
+  tasks:
+  - name: Installing NTP package 
+    package:
+      name: ntp 
+      state: present 
+  - name: Start NTPD Service 
+    service:
+      name: ntpd 
+      state: started 
+      enabled: yes 

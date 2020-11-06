@@ -1,0 +1,12 @@
+- name: copy file form ansible controller to mangeed node
+  hosts: all
+
+  tasks:
+  - name: Copy ansible.cfg
+    copy:
+      src: ansible.cfg
+      dest: /tmp/ansible.cfg
+      mode: "755"
+      owner: test_user
+      group: users 
+      

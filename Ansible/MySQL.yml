@@ -1,0 +1,23 @@
+- name: MySQL installation 
+  hosts: allocated
+  tasks:
+  - name: Download MySQL 
+    get_url: 
+      url:  http://repo.mysql.com/mysql-community-release-el7-7.noarch.rpm
+      dest: /tmp
+
+  - name: Install MySQL community repo 
+    yum:
+        name: /tmp/mysql-community-release-el7-7.noarch.rpm
+        state: present 
+
+  - name: Installing MySQL Server
+    package:
+      name: mysql-server
+      state: present
+      
+  - name: Start MySQL Server
+    service:
+      name: mysql
+      state: started
+      enabled: yes 
